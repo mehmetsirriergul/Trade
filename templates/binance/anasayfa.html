@@ -1,0 +1,52 @@
+{% extends 'binance/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="main-header">
+       <h4>Ana Sayfa</h4>
+    </div>
+ </div>
+ <!-- 4-blocks row start -->
+ <div class="row dashboard-header">
+    <div class="col-lg-3 col-md-6">
+       <div class="card dashboard-product">
+          <span>MSE Trading</span>
+          <h2 class="dashboard-total-products">4500</h2>
+          <span class="label label-warning">Bakiye</span>
+          <div class="side-box">
+             <i class="ti-money text-warning-color"></i>
+          </div>
+       </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+       <div class="card dashboard-product">
+          <span>MSE Trading</span>
+          <h2 class="dashboard-total-products">37,500</h2>
+          <span class="label label-primary">Kazanç</span>
+          <div class="side-box ">
+             <i class="ti-stats-up text-primary-color"></i>
+          </div>
+       </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+       <div class="card dashboard-product">
+          <span>MSE Trading</span>
+          <h2 class="dashboard-total-products">$<span>30,780</span></h2>
+          <span class="label label-success">Kayıp</span>
+          <div class="side-box">
+             <i class="ti-ti-stats-down text-success-color"></i>
+          </div>
+       </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+       <div class="card dashboard-product">
+          <span>MSE Trading</span>
+          <h2 class="dashboard-total-products">$<span>30,780</span></h2>
+          <span class="label label-danger">işlem Sayısı</span>
+          <div class="side-box">
+             <i class="ti-bar-chart text-danger-color"></i>
+          </div>
+       </div>
+    </div>
+ </div>
+{% endblock %}
