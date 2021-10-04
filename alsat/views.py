@@ -1,6 +1,9 @@
 from binance.client import Client
 
 from django.shortcuts import render
+import datetime
+
+
 
 
 
@@ -23,7 +26,7 @@ def anasayfa(request):
     return render(request, 'binance/anasayfa.html')
 
 def index(request):
-
+    
     return render(request, 'binance/index.html')
 
 def buy(request):
