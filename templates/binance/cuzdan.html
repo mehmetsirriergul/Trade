@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-sm-12 p-0">
        <div class="main-header" style="margin-top: 0px;">
-          <h4>General Elements</h4>
+          <h4>Bakiyelerim</h4>
           <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
              <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
              </li>
@@ -19,19 +19,69 @@
  </div>
 
  <div class="row">
-
+    <div class="col-lg-12">
+      <div class="card">
+         <div class="card-block">
+            <div class="row">
+               <div class="col-sm-12 table-responsive">
+                  <div class="dropdown-primary dropdown">
+                     <button class="btn btn-primary dropdown-toggle waves-effect waves-light " type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Coin Seç
+                           </button>
+                     <div class="dropdown-menu" aria-labelledby="dropdown1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                        {% for symbol in symbols %}
+                        <a class="dropdown-item waves-light waves-effect" href="#">{{ symbol.symbol }}</a>
+                        {% endfor %}
+                     </div>
+                  </div>
+                  <table class="table">
+                     <thead>
+                        <tr>
+                           <th>Coin Adı</th>
+                           <th>Miktarı</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        {% for dd in list %}
+                        <tr>
+                           <td>{{ dd.asset }}</td>
+                           <td>{{ dd.free }}</td>
+                        </tr>
+                        {% endfor %}
+   
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+    </div>
+   
 
     <!-- Textual inputs starts -->
     <div class="col-lg-12">
        <div class="card">
           <div class="card-header">
-             <h5 class="card-header-text">Textual Inputs</h5>
+             <h5 class="card-header-text">Cüzdanım</h5>
           </div>
           <div class="card-block">
-              ffffff
-              
+             <table>
+               {% for dd in list %}
+                <tr>
+                   <td>
+                     {{ dd.asset }}
+                   </td>
+                   <td>
+                     {{ dd.free }}
+                  </td>
+                </tr>
+               {% endfor %}
+             </table>  
+
             
-       </div>
+                
+            
+            
+         </div>
     </div>
     <!-- Textual inputs ends -->
  </div>
