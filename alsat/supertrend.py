@@ -1,5 +1,5 @@
 from binance.client import Client
-import talib as ta
+from ta.volatility import AverageTrueRange
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime
@@ -14,7 +14,7 @@ client=Client(ayarlar.api_key,ayarlar.secret_key)
 def generateSupertrend(close_array, high_array, low_array, atr_period, atr_multiplier):
 
     try:
-        atr = ta.ATR(high_array, low_array, close_array, atr_period)
+        atr = AverageTrueRange(high=high_array, low=low_array, close=close_array, window=atr_period)
     except:
         print('exception in atr:', sys.exc_info()[0], flush=True)
         
