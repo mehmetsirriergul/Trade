@@ -1,8 +1,8 @@
-import config
+import ayarlar
 import csv
 from binance.client import Client
 
-client = Client(config.API_KEY, config.API_SECRET)
+client = Client(ayarlar.API_KEY, ayarlar.API_SECRET)
 
 candles = client.get_account()
 print(candles)
